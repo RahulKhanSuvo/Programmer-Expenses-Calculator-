@@ -1,3 +1,4 @@
+let serial = 0;
 document.getElementById("calculate").addEventListener("click", function () {
   const income = getInputValue("income");
   const software = getInputValue("software");
@@ -15,6 +16,26 @@ document.getElementById("calculate").addEventListener("click", function () {
   removeHidden("results");
   setValueToInner("total-expenses", totalCost);
   setValueToInner("balance", balance);
+  serial += 1;
+  const div = document.createElement("div");
+  div.classList.add(
+    "bg-white",
+    "border-l-2",
+    "border-indigo-500",
+    "rounded-xl",
+    "p-3"
+  );
+  div.insertAdjacentHTML(
+    "beforeend",
+    `
+  <p>Serial No: ${serial}</p>
+  <p>Income: ৳${income}</p>
+  <p>Expenses: ৳${totalCost}</p>
+  <p>Balance: ৳${balance}</p>
+  `
+  );
+
+  document.getElementById("history-list").appendChild(div);
 });
 
 // validation
