@@ -66,6 +66,8 @@ historyTab.addEventListener("click", function () {
     "from-blue-500",
     "to-purple-600"
   );
+  removeHidden("results");
+  setHidden("expense-form");
 });
 assistantTab.addEventListener("click", function () {
   assistantTab.classList.add(
@@ -80,4 +82,6 @@ assistantTab.addEventListener("click", function () {
     "from-blue-500",
     "to-purple-600"
   );
+  removeHidden("expense-form");
+  setHidden("results");
 });
