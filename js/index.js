@@ -18,3 +18,8 @@ document.getElementById("calculate").addEventListener("click", function () {
 });
 
 // validation
+inputValidation("income", "income-error");
+inputValidation("software", "software-error");
+inputValidation("courses", "courses-error");
+inputValidation("internet", "internet-error");
+// calculate saving
